@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+body {
+  background-color: #1f2632;
+  color: #cee3e9;
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-section {
+  margin: auto;
+  width: 50%;
+  background-color: #323a49;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-section .title {
+  color: #52ffa8;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  margin: 1rem;
+}
+
+main .main-section .advice {
+  font-size: 24px;
+  text-align: center;
+  margin: 1rem;
+}
+
+main .main-section .devider {
+  margin: 1rem;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-section .devider #devider_desktop {
+  display: block;
+  margin: auto;
+}
+
+main .main-section .devider #devider_mobile {
+  display: none;
+}
+
+main .main-section .icon {
+  background-color: #52ffa8;
+  width: 4rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+  top: 2rem;
+}
+
+main .main-section .icon img {
+  margin: auto;
+}
+
+@media screen and (max-width: 375px) {
+  main .main-section {
+    width: 90%;
+  }
+  main .main-section .title {
+    font-size: 12px;
+  }
+  main .devider {
+    margin: 1rem;
+  }
+  main .devider #devider_mobile {
+    display: block !important;
+  }
+  main .devider #devider_desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main .devider #devider_desktop {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

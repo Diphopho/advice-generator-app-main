@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="main-section">
+        <h1 class="title" id="title"></h1>
+        <h2 class="advice" id="advice"></h2>
+        <figure class="devider">
+          <img
+            id="devider_desktop"
+            alt="devider_desktop"
+            src="/images/pattern-divider-desktop.svg"
+          />
+          <img
+            id="devider_mobile"
+            alt="devider_mobile"
+            src="/images/pattern-divider-mobile.svg"
+          />
+        </figure>
+        <figure class="icon">
+          <img src="/images/icon-dice.svg" alt="icon-dice" />
+        </figure>
+      </section>
+    </main>
+
+    <section class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/Diphopho"
+        >Dwiporanda Ertantiyo</a
+      >.
+    </section>
+    <script>
+      const url = "https://api.adviceslip.com/advice";
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          const title = document.getElementById("title");
+          const advice = document.getElementById("advice");
+          title.innerHTML = "ADVICE #" + data.slip.id;
+          advice.innerHTML = `" ` + data.slip.advice + `"`;
+        });
+    </script>
+  </body>
+</html>
